@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукция - Парфюмерный магазин "Аромат"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Логотип Аромат"></a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li>
+                        <a href="products.html">Продукция</a>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <form class="search-form" action="search.html" method="GET">
+                <input type="text" name="query" placeholder="Поиск...">
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> &gt;
+                <span>Продукция</span>
+            </div>
+
+            <h1>Каталог парфюмерии</h1>
+
+            <form class="filters-form" action="products.html" method="GET">
+                <label for="brand">Бренд:</label>
+                <select id="brand" name="brand">
+                    <option value="">Все бренды</option>
+                    <option value="chanel">Chanel</option>
+                    <option value="dior">Dior</option>
+                    <option value="tomford">Tom Ford</option>
+                </select>
+				                <label for="gender">Пол:</label>
+                <select id="gender" name="gender">
+                    <option value="">Любой пол</option>
+                    <option value="female">Женский</option>
+                    <option value="male">Мужской</option>
+                    <option value="unisex">Унисекс</option>
+                </select>
+
+                <label for="price">Цена:</label>
+                <select id="price" name="price">
+                    <option value="">Любая цена</option>
+                    <option value="asc">По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+
+                <button type="submit">Применить</button>
+            </form>
+
+            <ul class="product-list">
+                <li>
+                    <img src="images/perfume1.jpg" alt="Парфюм 1">
+                    <h3>Tom Ford Black Orchid</h3>
+                    <p>Роскошный и загадочный аромат, который пленит с первого вдоха.
+                        В центре композиции – редкая черная орхидея, окруженная нотами черного трюфеля, иланг-иланга и бергамота.
+                        Базовые ноты темного шоколада, пачули и сандалового дерева создают богатый и чувственный шлейф.
+                        Tom Ford Black Orchid – это аромат для тех, кто ценит эксклюзивность и не боится быть собой. Цена: 8350 руб.</p>
+                    <a href="product_details.html?id=1">Подробнее</a>
+                </li>
+                <li>
+                    <img src="images/perfume2.jpg" alt="Парфюм 2">
+                    <h3>Chanel N°5</h3>
+                     <p>Легенда вне времени.
+                        Альдегидно-цветочный букет, ставший символом элегантности и женственности.
+                        Открываясь свежими нотами нероли, иланг-иланга и бергамота, он плавно переходит в сердце из розы и жасмина, выращенных в Грассе.
+                        Базовые ноты сандалового дерева, ветивера и ванили создают теплый и чувственный шлейф, который остается в памяти навсегда.
+                        Chanel N°5 – это не просто аромат, это воплощение стиля Chanel. Цена: 7000 руб.</p>
+                    <a href="product_details.html?id=2">Подробнее</a>
+                </li>
+                <li>
+                    <img src="images/perfume3.jpg" alt="Парфюм 3">
+                    <h3>Dior Sauvage</h3>
+                    <<p>Дерзкий и современный аромат для настоящего мужчины. 
+					Взрывная свежесть калабрийского бергамота сочетается с амброксаном, создавая мощный и притягательный шлейф. 
+					Ноты сычуаньского перца и пачули придают композиции глубину и чувственность. 
+					Dior Sauvage – это аромат свободы и независимости, созданный для тех, кто не боится идти своим путем. Цена: 9800 руб.</p>
+                    <a href="product_details.html?id=3">Подробнее</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Парфюмерный магазин "Аромат". Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
+

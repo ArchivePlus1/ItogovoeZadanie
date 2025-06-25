@@ -1,0 +1,421 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Шапка сайта */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-height: 70px;
+    border-bottom: #bbb 1px solid;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-height: 50px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+header nav ul li a:hover {
+    background-color: #555; /* Затемнение при наведении */
+}
+
+/* Стили для выпадающего меню */
+header nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    list-style: none;
+    width: 200px;
+    z-index: 10;
+}
+
+header nav ul li:hover > ul {
+    display: block;
+}
+
+header nav ul li ul li {
+    margin: 0;
+    border-bottom: 1px solid #555;
+}
+
+header nav ul li ul li:last-child {
+    border-bottom: none;
+}
+
+header nav ul li ul li a {
+    display: block;
+    padding: 10px;
+}
+
+/* Стили для формы поиска */
+.search-form {
+    display: flex;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: px 0 0 3px;
+}
+
+.search-form button {
+    background-color: #e8491d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+/* Главный раздел */
+.hero {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Секция "Популярные ароматы" */
+.featured-products {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Стили для страницы products.html */
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+
+.product-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.product-list li img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Кнопки */
+.button {
+    background-color: #e8491d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Подвал */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Стили для страницы product_details.html */
+#product-details {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#product-details h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 50%;
+    padding: 10px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-description {
+    width: 50%;
+    padding: 10px;
+}
+
+.product-description p {
+    margin-bottom: 10px;
+}
+
+/* Стили для страницы contact.html */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+}
+
+input[type="submit"] {
+    background-color: #e8491d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #c63d15;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность (Media Queries) */
+@media (max-width: 768px) {
+    header .logo,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        padding: 0;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    header nav ul li {
+        float: none;
+        display: block;
+        margin: 10px 0; 
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;
+    }
+
+    #product-details {
+        flex-direction: column;
+    }
+
+    .product-image,
+    .product-description {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.breadcrumbs {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.breadcrumbs a {
+    color: #333;
+    text-decoration: none;
+}
+
+.breadcrumbs span {
+    color: #777;
+}
+
+.filters-form {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.filters-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filters-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.filters-form button {
+    background-color: #e8491d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-reviews {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.product-reviews h2 {
+    margin-bottom: 10px;
+}
+
+.review {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.related-products {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Адаптивность для планшетов и больших экранов */
+@media (min-width: 768px) {
+    header nav ul {
+        flex-direction: row; /* Возвращаем в строку на больших экранах */
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    #product-details {
+        flex-direction: row; /* Возвращаем в строку на больших экранах */
+    }
+
+    .product-image {
+        width: 40%; /* Занимает 40% ширины */
+    }
+
+    .product-description {
+        width: 60%; /* Занимает 60% ширины */
+        padding-left: 20px; /* Добавляем отступ слева */
+    }
+}

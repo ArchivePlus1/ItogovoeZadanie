@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали товара - Парфюмерный магазин "Аромат"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Логотип Аромат"></a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li>
+                        <a href="products.html">Продукция</a>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <form class="search-form" action="search.html" method="GET">
+                <input type="text" name="query" placeholder="Поиск...">
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> &gt;
+                <a href="products.html">Продукция</a> &gt;
+                <span id="product-name-breadcrumb"></span> 
+            </div>
+
+            <section id="product-details">
+                <h1 id="product-name"></h1>
+                <div class="product-image">
+                    <img id="product-image" src="" alt="">
+                </div>
+                <div class="product-description">
+                    <p id="product-description"></p>
+                    <p>Цена: <span id="product-price"></span> руб.</p>
+					                    <button>Добавить в корзину</button>
+                </div>
+            </section>
+
+            <section class="product-reviews">
+                <h2>Отзывы покупателей</h2>
+                <div id="reviews-container">
+                  
+                </div>
+                <h3>Оставить отзыв</h3>
+                <form id="add-review-form">
+                    <label for="review-text">Ваш отзыв:</label><br>
+                    <textarea id="review-text" name="review-text" rows="4" cols="50"></textarea><br>
+                    <button type="submit">Отправить отзыв</button>
+                </form>
+            </section>
+
+            <section class="related-products">
+                <h2>Похожие товары</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/perfume1.jpg" alt="Парфюм 1">
+                        <h3>Tom Ford Black Orchid</h3>
+                        <p>Роскошный и загадочный аромат, который пленит с первого вдоха.
+                        В центре композиции – редкая черная орхидея, окруженная нотами черного трюфеля, иланг-иланга и бергамота.
+                        Базовые ноты темного шоколада, пачули и сандалового дерева создают богатый и чувственный шлейф.
+                        Tom Ford Black Orchid – это аромат для тех, кто ценит эксклюзивность и не боится быть собой.</p>
+                        <a href="product_details.html?id=1" class="button">Подробнее</a>
+                    </div>
+                    <div class="product">
+                        <img src="images/perfume2.jpg" alt="Парфюм 2">
+                        <h3>Chanel N°5</h3>
+                        <p>Легенда вне времени.
+                        Альдегидно-цветочный букет, ставший символом элегантности и женственности.
+                        Открываясь свежими нотами нероли, иланг-иланга и бергамота, он плавно переходит в сердце из розы и жасмина, выращенных в Грассе.
+                        Базовые ноты сандалового дерева, ветивера и ванили создают теплый и чувственный шлейф, который остается в памяти навсегда.
+                        Chanel N°5 – это не просто аромат, это воплощение стиля Chanel.</p>
+                        <a href="product_details.html?id=2" class="button">Подробнее</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+     <footer>
+        <p>&copy; 2025 Парфюмерный магазин "Аромат". Все права защищены.</p>
+    </footer>
+
+    <script>
+        
+           
+            const reviewsContainer = document.querySelector('#reviews-container');
+            const reviewForm = document.querySelector('#add-review-form');
+
+            
+            if (reviewForm) {
+                reviewForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const reviewText = document.querySelector('#review-text').value;
+
+                    
+                    product.reviews.push(reviewText);
+
+                    
+                    if (reviewsContainer) { 
+                        reviewsContainer.innerHTML = ''; 
+                        product.reviews.forEach(review => {
+                            const reviewElement = document.createElement('div');
+                            reviewElement.classList.add('review');
+                            reviewElement.innerHTML = `<p>${review}</p>`;
+                            reviewsContainer.appendChild(reviewElement);
+                        });
+                    }
+
+                    document.querySelector('#review-text').value = ''; // Очищаем форму
+                });
+            }
+
+        } else {
+            // Если товар не найден, отображаем сообщение об ошибке
+            const productDetails = document.querySelector('#product-details'); // Ищем элемент с id product-details
+            if (productDetails) { // Проверяем, существует ли элемент
+                productDetails.innerHTML = '<p>Товар не найден.</p>';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
